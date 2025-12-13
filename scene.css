@@ -319,7 +319,7 @@
     /* Next button - Pixel Style */
     .next-btn {
       position: absolute;
-      bottom: clamp(15px, 3vh, 30px);
+      top: clamp(15px, 10vh, 30px);
       right: clamp(15px, 3vw, 30px);
       background: #4a90e2;
       color: white;

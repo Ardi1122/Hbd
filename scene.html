@@ -1,106 +1,86 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>Pixel Birthday - Surat Spesial</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="scene.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pixel Birthday - Surat Spesial</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="scene.css" />
+  </head>
+  <body>
+    <!-- Particles background -->
+    <div class="particles" id="particles"></div>
 
-<!-- Particles background -->
-<div class="particles" id="particles"></div>
+    <div class="container">
+      <!-- Sound toggle -->
+      <div class="sound-toggle" id="soundToggle">🔊</div>
 
-<div class="container">
-  <!-- Sound toggle -->
-  <div class="sound-toggle" id="soundToggle">🔊</div>
+      <!-- Envelope wrapper -->
+      <div class="envelope-wrapper">
+        <!-- Decorative elements -->
+        <div class="letter-decoration deco-1">✨</div>
+        <div class="letter-decoration deco-2">🎈</div>
+        <div class="letter-decoration deco-3">🎁</div>
+        <div class="letter-decoration deco-4">🎉</div>
 
-  <!-- Envelope wrapper -->
-  <div class="envelope-wrapper">
-    <!-- Decorative elements -->
-    <div class="letter-decoration deco-1">✨</div>
-    <div class="letter-decoration deco-2">🎈</div>
-    <div class="letter-decoration deco-3">🎁</div>
-    <div class="letter-decoration deco-4">🎉</div>
+        <!-- Envelope -->
+        <div class="envelope" id="envelope">
+          <div class="envelope-flap"></div>
 
-    <!-- Envelope -->
-    <div class="envelope" id="envelope">
-      <div class="envelope-flap"></div>
-      
-      <!-- Letter paper -->
-      <div class="letter-paper" id="letterPaper">
-  <div class="letter-header">
-    Dari jarak yang jauh, untuk seseorang yang berarti
-  </div>
+          <!-- Letter paper -->
+          <div class="letter-paper" id="letterPaper">
+            <div class="letter-header">Happy Birthday</div>
 
-  <div class="letter-greeting">
-    Untuk sahabat yang selalu kuingat,
-  </div>
+            <div class="letter-greeting">Happy Birthday, Electra</div>
 
-  <div class="letter-body">
-    <p>
-      Mungkin kita tidak pernah benar-benar berada di tempat yang sama. 
-      Jarak membentang di antara kita, layar menjadi perantara, dan waktu 
-      sering kali berjalan berbeda. Tapi entah mengapa, percakapan denganmu 
-      selalu terasa dekat.
-    </p>
+            <div class="letter-body">
+              <p>
+                You are like the sun..always warm, always bright, always
+                bringing light without even trying. Your cheerfulness has a
+                quiet way of reaching people, and it makes the days feel easier
+                just by being there.
+              </p>
 
-    <p>
-      Hari ini adalah hari yang penting. Hari ketika dunia bertambah satu 
-      sosok baik di dalamnya. Selamat ulang tahun. Semoga hari ini memberi 
-      alasan untuk tersenyum, meski sederhana.
-    </p>
+              <p>
+                Through simple moments, through games we play and laughs we
+                share, you’ve been a constant source of warmth. Even in ordinary
+                times, your presence feels comforting, like sunlight in the
+                morning.
+              </p>
 
-    <p>
-      Terima kasih sudah menjadi teman yang hadir tanpa harus diminta. 
-      Yang mau mendengar tanpa menghakimi. Yang kadang hanya diam, 
-      tapi cukup untuk membuat segalanya terasa lebih ringan.
-    </p>
+              <p>
+                I hope this new year returns all the light you give to others.
+                May your days be soft, your smile stay genuine, and your heart
+                always find reasons to feel happy.
+              </p>
 
-    <p>
-      Aku berharap tahun yang baru ini memberimu hal-hal yang selama ini 
-      kamu perjuangkan—ketenangan, kesehatan, dan langkah-langkah kecil 
-      menuju hal yang kamu impikan, tanpa harus terburu-buru.
-    </p>
+              <p>Thank you for being the sunshine you are, Electra.</p>
 
-    <p>
-      Walaupun kita mungkin belum tahu kapan bisa bertemu, semoga kamu 
-      tahu satu hal: keberadaanmu punya arti, dan persahabatan ini adalah 
-      sesuatu yang aku hargai dengan tulus.
-    </p>
-  </div>
+              <p>Happy Birthday</p>
+            </div>
+          </div>
+        </div>
 
-  <div class="letter-signature">
-    Dari seorang teman yang selalu mendoakan yang terbaik
-  </div>
+        <!-- Click instruction -->
+        <div class="click-instruction" id="clickInstruction">
+          📧 Klik amplop untuk membuka surat
+        </div>
 
-  <div class="letter-ps">
-    P.S. Ada satu kejutan kecil menunggumu setelah ini. Semoga kamu suka.
-  </div>
-</div>
-
+        <!-- Next button -->
+        <div class="next-btn" id="nextBtn">
+          Lanjut ke Kejutan 🎁 <span class="arrow">→</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Click instruction -->
-    <div class="click-instruction" id="clickInstruction">
-      📧 Klik amplop untuk membuka surat
-    </div>
+    <!-- Transition overlay -->
+    <div class="transition" id="transition"></div>
+    <audio id="bgMusic" loop>
+      <source src="assets/music.mp3" type="audio/mpeg" />
+    </audio>
 
-    <!-- Next button -->
-     <div class="next-btn" id="nextBtn">
-      Lanjut ke Kejutan 🎁 <span class="arrow">→</span>
-    </div>
-  </div>
-</div>
-
-<!-- Transition overlay -->
-<div class="transition" id="transition"></div>
-<audio id="bgMusic" loop>
-  <source src="assets/music.mp3" type="audio/mpeg">
-</audio>
-
-
-<script src="scene.js"></script>
-
-</body>
+    <script src="scene.js"></script>
+  </body>
 </html>

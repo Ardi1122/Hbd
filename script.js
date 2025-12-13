@@ -78,7 +78,7 @@ const ambilBtn = document.getElementById("ambilBtn");
         if (option.action === 'take') {
           // Close dialog and enable letter taking
           closeDialog();
-          instruction.textContent = '🎮 Klik tangan untuk mengambil surat ulang tahun! 🎂';
+          instruction.textContent = '🎮 Klik tangan untuk mengambil surat misterius';
           ambilBtn.style.pointerEvents = 'auto';
         } else if (option.action === 'ignore') {
           // Close dialog but don't enable
@@ -87,7 +87,7 @@ const ambilBtn = document.getElementById("ambilBtn");
           characterOut = false;
           setTimeout(() => {
             character.classList.add('walking');
-            character.style.left = '3%';
+            character.style.left = '20%';
             setTimeout(() => {
               character.classList.add('hidden');
               character.classList.remove('walking');
@@ -204,7 +204,7 @@ const ambilBtn = document.getElementById("ambilBtn");
     setTimeout(() => {
       character.classList.remove('exiting');
       character.classList.add('walking');
-      character.style.left = '18%';
+      character.style.left = '30%';
       playSound(250, 0.2);
       
       // Update instruction
@@ -247,7 +247,7 @@ const ambilBtn = document.getElementById("ambilBtn");
     character.classList.add('walking');
     
     // Move character to letter
-    character.style.left = "79%";
+    character.style.left = "69%";
     
     // Disable button
     ambilBtn.classList.add('disabled');
@@ -270,8 +270,6 @@ const ambilBtn = document.getElementById("ambilBtn");
 
     // Navigate to next scene
     setTimeout(() => {
-      // Uncomment this when scene2.html is ready
-      // window.location.href = "scene2.html";
       
       // Demo: Show alert and reset
       window.location.href = "scene.html";
@@ -279,9 +277,9 @@ const ambilBtn = document.getElementById("ambilBtn");
       // Reset for demo purposes
       transition.classList.remove('active');
       progressBar.classList.remove('active');
-      character.style.left = "42%";
+      character.style.left = "62%";
       character.classList.add('hidden');
-      character.style.left = "3%";
+      character.style.left = "15%";
       ambilBtn.classList.remove('disabled');
       ambilBtn.style.pointerEvents = "auto";
       characterOut = false;

@@ -87,11 +87,11 @@
     /* Rumah - responsive percentage based */
     .house {
       position: absolute;
-      bottom: 12%;
-      left: 3%;
+      bottom: 10%;
+      left: 10%;
       width: 33%;
       height: auto;
-      max-width: 320px;
+      max-width: 620px;
       filter: drop-shadow(0.5vw 0.5vw 1vw rgba(0,0,0,0.5));
       transition: transform 0.3s;
       cursor: pointer;
@@ -117,10 +117,10 @@
     .character {
       position: absolute;
       bottom: 12%;
-      left: 42%;
+      left: 82%;
       width: 12.5%;
       height: auto;
-      max-width: 120px;
+      max-width: 250px;
       transition: left 2.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s;
       z-index: 10;
       filter: drop-shadow(0.3vw 0.3vw 0.6vw rgba(0,0,0,0.4));
@@ -128,12 +128,12 @@
 
     .character.hidden {
       opacity: 0;
-      left: 3%;
+      left: 20%;
       pointer-events: none;
     }
 
     .character.exiting {
-      left: 19%;
+      left: 30%;
       opacity: 1;
     }
 
@@ -149,8 +149,8 @@
     /* Letter area - responsive percentage based */
     .letter-area {
       position: absolute;
-      bottom: 17%;
-      right: 7%;
+      bottom: 10%;
+      right: 18%;
       text-align: center;
       animation: letterPulse 2s infinite;
       z-index: 5;
@@ -336,11 +336,11 @@
     .dialog-box {
       position: absolute;
       bottom: 37%;
-      left: 50%;
+      left: 45%;
       transform: translateX(-50%) scale(0);
       width: clamp(280px, 52%, 500px);
       background: rgba(0, 0, 0, 0.95);
-      border: clamp(3px, 0.4vw, 4px) solid #ffd700;
+      border: clamp(3px, 0.4vw, 4px) solid #f860ca;
       border-radius: clamp(10px, 1.5vw, 15px);
       padding: clamp(12px, 2vw, 20px) clamp(15px, 2.5vw, 25px);
       z-index: 200;
@@ -363,7 +363,7 @@
       width: clamp(28px, 4vw, 40px);
       height: clamp(28px, 4vw, 40px);
       background: #4ecdc4;
-      border: clamp(2px, 0.3vw, 3px) solid #ffd700;
+      border: clamp(2px, 0.3vw, 3px) solid #f860ca;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -373,7 +373,7 @@
     }
 
     .dialog-name {
-      color: #ffd700;
+      color: #f860ca;
       font-family: 'Courier New', monospace;
       font-weight: bold;
       font-size: clamp(11px, 1.4vw, 14px);
@@ -398,8 +398,8 @@
     }
 
     .dialog-btn {
-      background: linear-gradient(180deg, #4ecdc4 0%, #44a08d 100%);
-      border: clamp(2px, 0.3vw, 3px) solid #2d9687;
+      background: linear-gradient(180deg, #d613bc 0%, #c63ed8 100%);
+      border: clamp(2px, 0.3vw, 3px) solid #f3f3f3;
       color: white;
       padding: clamp(8px, 1vw, 10px) clamp(12px, 2vw, 20px);
       border-radius: clamp(6px, 0.8vw, 8px);
@@ -408,7 +408,7 @@
       cursor: pointer;
       font-size: clamp(10px, 1.3vw, 13px);
       transition: all 0.3s;
-      box-shadow: 0 0.4vw 0 #2d9687;
+      box-shadow: 0 0.4vw 0 #7d2d96;
       text-shadow: 0.1vw 0.1vw 0 rgba(0,0,0,0.3);
       white-space: nowrap;
       touch-action: manipulation;
@@ -416,13 +416,13 @@
 
     .dialog-btn:hover, .dialog-btn:active {
       transform: translateY(-0.2vw);
-      box-shadow: 0 0.6vw 0 #2d9687;
-      background: linear-gradient(180deg, #5fd9cf 0%, #50b5a0 100%);
+      box-shadow: 0 0.6vw 0 #e041b0;
+      background: linear-gradient(180deg, #d95fd9 0%, #b550ad 100%);
     }
 
     .dialog-btn:active {
       transform: translateY(0.2vw);
-      box-shadow: 0 0.2vw 0 #2d9687;
+      box-shadow: 0 0.2vw 0 #962d91;
     }
 
     .dialog-btn.secondary {
@@ -440,33 +440,6 @@
       box-shadow: 0 0.2vw 0 #5d6d6e;
     }
 
-    /* Dialog indicator (arrow) */
-    .dialog-box::after {
-      content: '';
-      position: absolute;
-      bottom: -2vw;
-      left: 30%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 0;
-      border-left: 1.5vw solid transparent;
-      border-right: 1.5vw solid transparent;
-      border-top: 2vw solid #ffd700;
-    }
-
-    .dialog-box::before {
-      content: '';
-      position: absolute;
-      bottom: -1.4vw;
-      left: 30%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 0;
-      border-left: 1.2vw solid transparent;
-      border-right: 1.2vw solid transparent;
-      border-top: 1.7vw solid rgba(0, 0, 0, 0.95);
-      z-index: 1;
-    }
 
     /* Overlay untuk dialog */
     .dialog-overlay {

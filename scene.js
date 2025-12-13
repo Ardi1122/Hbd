@@ -141,15 +141,8 @@ nextBtn.addEventListener("click", () => {
 
   setTimeout(() => {
     // Navigate to scene 3 or show message
-    alert(
-      "🎁 Scene 3 akan segera hadir!\n\nTerima kasih sudah membaca surat ini ❤️"
-    );
+    window.location.href = "scene3.html";
 
-    // For demo, go back to scene 1
-    // window.location.href = 'index.html';
-
-    // Or go to scene 3
-    // window.location.href = 'scene3.html';
 
     transition.classList.remove("active");
   }, 600);
