@@ -7,9 +7,23 @@ const particles = document.getElementById("particles");
 
 let soundEnabled = true;
 let envelopeOpened = false;
-
+let audioContext = null;
+let audioReady = false;
 
 let musicPlaying = false;
+
+document.addEventListener(
+  "click",
+  () => {
+    if (!audioContext) {
+      audioContext = new (window.AudioContext ||
+        window.webkitAudioContext)();
+      audioContext.resume();
+      audioReady = true;
+    }
+  },
+  { once: true }
+);
 
 // buka amplop
 envelope.addEventListener("click", () => {
@@ -72,11 +86,9 @@ createParticles();
 
 // Sound effects
 function playSound(frequency, duration, type = "sine") {
-  if (!soundEnabled) return;
+  if (!soundEnabled || !audioReady) return;
 
   try {
-    const audioContext = new (window.AudioContext ||
-      window.webkitAudioContext)();
     const oscillator = audioContext.createOscillator();
     const gainNode = audioContext.createGain();
 
@@ -141,7 +153,7 @@ nextBtn.addEventListener("click", () => {
 
   setTimeout(() => {
     // Navigate to scene 3 or show message
-    window.location.href = "scene3.html";
+    window.location.href = "scene2.html";
 
 
     transition.classList.remove("active");
@@ -173,8 +185,6 @@ function playAmbientSound() {
   }
 }
 
-// Play ambient sound on load
-setTimeout(playAmbientSound, 1000);
 
 // Prevent zoom on double tap
 let lastTouchEnd = 0;
