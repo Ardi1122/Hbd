@@ -1,19 +1,19 @@
 // Memory data
 const memories = [
   {
-    image: "/assets/img/slide/memory1.jpg",
+    image: "assets/img/slide/memory1.jpg",
     caption: "Pertama kali kita main bareng di Roblox! 🎮",
   },
   {
-    image: "/assets/img/slide/memory2.jpg",
+    image: "assets/img/slide/memory2.jpg",
     caption: "Moment seru kita di game Tower of Hell 🗼",
   },
   {
-    image: "/assets/img/slide/memory3.jpg",
+    image: "assets/img/slide/memory3.jpg",
     caption: "Build rumah impian bareng di Bloxburg 🏠",
   },
   {
-    image: "/assets/img/slide/memory4.jpg",
+    image: "assets/img/slide/memory4.jpg",
     caption: "Ketika kita jadi team terbaik! 👾✨",
   },
 ];
